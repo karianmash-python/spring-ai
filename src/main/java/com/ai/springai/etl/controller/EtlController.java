@@ -25,9 +25,10 @@ public class EtlController {
     }
 
     @PostMapping("/process")
-    public ResponseEntity<String> processFile(@RequestParam("file") MultipartFile file,
-                                              @RequestParam(value = "saveAsMarkdown", defaultValue = "false") boolean saveAsMarkdown,
-                                              @RequestParam(value = "saveToVectorStore", defaultValue = "false") boolean saveToVectorStore) {
+    public ResponseEntity<String> processFile(
+            @RequestParam("file") MultipartFile file,
+            @RequestParam(value = "saveAsMarkdown", defaultValue = "false") boolean saveAsMarkdown,
+            @RequestParam(value = "saveToVectorStore", defaultValue = "true") boolean saveToVectorStore) {
         logger.info("Received request to process file: {}", file.getOriginalFilename());
         try {
             etlService.processFile(file, saveAsMarkdown, saveToVectorStore);
