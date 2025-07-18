@@ -25,10 +25,12 @@ public class EtlController {
     }
 
     @PostMapping("/process")
-    public ResponseEntity<String> processFile(@RequestParam("file") MultipartFile file) {
+    public ResponseEntity<String> processFile(@RequestParam("file") MultipartFile file,
+                                              @RequestParam(value = "saveAsMarkdown", defaultValue = "false") boolean saveAsMarkdown,
+                                              @RequestParam(value = "saveToVectorStore", defaultValue = "false") boolean saveToVectorStore) {
         logger.info("Received request to process file: {}", file.getOriginalFilename());
         try {
-            etlService.processFile(file);
+            etlService.processFile(file, saveAsMarkdown, saveToVectorStore);
             logger.info("File processed successfully: {}", file.getOriginalFilename());
             return ResponseEntity.status(HttpStatus.OK).body("File processed successfully: " + file.getOriginalFilename());
         } catch (IOException e) {
@@ -36,4 +38,5 @@ public class EtlController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Could not process file: " + e.getMessage());
         }
     }
+
 }

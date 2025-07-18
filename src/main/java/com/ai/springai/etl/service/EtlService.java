@@ -4,11 +4,14 @@ import com.ai.springai.etl.factory.DocumentReaderFactory;
 import com.ai.springai.etl.loader.FileLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.deepseek.DeepSeekChatModel;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.document.DocumentReader;
+import org.springframework.ai.vectorstore.VectorStore;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
@@ -25,15 +28,17 @@ public class EtlService {
     private static final Logger logger = LoggerFactory.getLogger(EtlService.class);
     private final DocumentReaderFactory documentReaderFactory;
     private final FileLoader loader;
-    private final DeepSeekChatModel chatClient;
+    private final ChatClient chatClient;
+    private final VectorStore vectorStore;
 
-    public EtlService(DocumentReaderFactory documentReaderFactory, FileLoader loader, DeepSeekChatModel chatClient) {
+    public EtlService(DocumentReaderFactory documentReaderFactory, FileLoader loader, @Qualifier("deepSeekChatClient") ChatClient chatClient, VectorStore vectorStore) {
         this.documentReaderFactory = documentReaderFactory;
         this.loader = loader;
         this.chatClient = chatClient;
+        this.vectorStore = vectorStore;
     }
 
-    public void processFile(MultipartFile file) throws IOException {
+    public void processFile(MultipartFile file, boolean saveAsMarkdown, boolean saveToVectorStore) throws IOException {
         logger.info("Received file: {}, content type: {}", file.getOriginalFilename(), file.getContentType());
 
         Resource resource = new ByteArrayResource(file.getBytes()) {
@@ -47,18 +52,26 @@ public class EtlService {
         List<Document> documents = reader.get();
         logger.info("Successfully read {} documents from file: {}", documents.size(), file.getOriginalFilename());
 
-        String content = documents.stream()
-                .map(Document::getFormattedContent)
-                .collect(Collectors.joining("\n\n--- END OF DOCUMENT ---\n\n"));
+        if (saveToVectorStore) {
+            logger.info("Saving {} documents to vector store.", documents.size());
+            vectorStore.add(documents);
+            logger.info("Documents saved to vector store successfully.");
+        }
 
-        PromptTemplate promptTemplate = getPromptTemplate();
-        Prompt prompt = promptTemplate.create(Map.of("text_content", content));
+        if (saveAsMarkdown) {
+            String content = documents.stream()
+                    .map(Document::getFormattedContent)
+                    .collect(Collectors.joining("\n\n--- END OF DOCUMENT ---\n\n"));
 
-        String transformedContent = chatClient.call(prompt).getResult().getOutput().getText();
+            PromptTemplate promptTemplate = getPromptTemplate();
+            Prompt prompt = promptTemplate.create(Map.of("text_content", content));
 
-        String outputFilename = getOutputFilename(file.getOriginalFilename());
-        if (transformedContent != null) {
-            loader.load(transformedContent.getBytes(), outputFilename);
+            String transformedContent = chatClient.prompt(prompt).call().content();
+
+            String outputFilename = getOutputFilename(file.getOriginalFilename());
+            if (transformedContent != null) {
+                loader.load(transformedContent.getBytes(), outputFilename);
+            }
         }
     }
 
@@ -89,3 +102,4 @@ public class EtlService {
     }
 
 }
+
