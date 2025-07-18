@@ -1,0 +1,46 @@
+<configuration>
+
+    <!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- ANSI-colored console output -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %highlight(%-5level) %cyan([%-50.50class]) >>> %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/spring-ai.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/spring-ai.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{10} [%file:%line]
+                %replace(%msg){'password=(.*?),','password=MASKED,'}%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- App-specific logger -->
+    <logger name="com.ai" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <!-- Hibernate SQL and binding logs (disabled by default) -->
+    <!-- <logger name="org.hibernate" level="DEBUG" additivity="false"/> -->
+    <logger name="org.hibernate" level="OFF"/>
+
+    <!-- Spring Boot specific logger -->
+    <logger name="org.springframework.boot.web.servlet.ServletContextInitializerBeans" level="ERROR"/>
+
+    <!-- Root logger -->
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
