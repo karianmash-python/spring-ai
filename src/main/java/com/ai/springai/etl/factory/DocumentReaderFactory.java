@@ -1,5 +1,7 @@
 package com.ai.springai.etl.factory;
 
+import org.springframework.ai.reader.JsonReader;
+import org.springframework.ai.reader.TextReader;
 import org.springframework.ai.reader.pdf.PagePdfDocumentReader;
 import org.springframework.ai.reader.tika.TikaDocumentReader;
 import org.springframework.ai.document.DocumentReader;
@@ -19,8 +21,16 @@ public class DocumentReaderFactory {
             return new PagePdfDocumentReader(resource);
         }
 
-        if (filename.toLowerCase().endsWith(".doc") || filename.toLowerCase().endsWith(".docx") || filename.toLowerCase().endsWith(".txt") || filename.toLowerCase().endsWith(".md")) {
+        if (filename.toLowerCase().endsWith(".doc") || filename.toLowerCase().endsWith(".docx") || filename.toLowerCase().endsWith(".md")) {
             return new TikaDocumentReader(resource);
+        }
+
+        if (filename.toLowerCase().endsWith(".json")) {
+            return new JsonReader(resource);
+        }
+
+        if (filename.toLowerCase().endsWith(".txt")) {
+            return new TextReader(resource);
         }
 
         // Default or throw exception

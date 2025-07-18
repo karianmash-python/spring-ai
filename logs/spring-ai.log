@@ -192,3 +192,847 @@ You may need to update both your build tool settings as well as your IDE.
                 Vector Store File Exists,
 2025-07-18 20:59:05 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
                 Started TemplateApplication in 7.622 seconds (process running for 9.493)
+2025-07-18 21:11:48 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 15140 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:11:48 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:11:48 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:11:55 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:11:55 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 7.966 seconds (process running for 10.502)
+2025-07-18 21:12:25 INFO  [http-nio-8585-exec-3] c.a.s.e.c.EtlController [EtlController.java:32]
+                Received request to process file: Full stack engineer.pdf
+2025-07-18 21:12:25 INFO  [http-nio-8585-exec-3] c.a.s.e.s.EtlService [EtlService.java:42]
+                Received file: Full stack engineer.pdf, content type: application/pdf
+2025-07-18 21:12:26 INFO  [http-nio-8585-exec-3] c.a.s.e.s.EtlService [EtlService.java:53]
+                Successfully read 2 documents from file: Full stack engineer.pdf
+2025-07-18 21:12:56 INFO  [http-nio-8585-exec-3] c.a.s.e.l.FileLoader [FileLoader.java:31]
+                Successfully saved processed file to: C:\Users\ianma\Projects\Personal\Java\spring-ai\etl_output\Full stack engineer.md
+2025-07-18 21:12:56 INFO  [http-nio-8585-exec-3] c.a.s.e.c.EtlController [EtlController.java:35]
+                File processed successfully: Full stack engineer.pdf
+2025-07-18 21:28:23 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 21040 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:28:23 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:28:23 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:28:30 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:28:30 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 8.198 seconds (process running for 9.894)
+2025-07-18 21:28:47 ERROR [http-nio-8585-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:170]
+                Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: VectorStore is null] with root cause
+java.lang.RuntimeException: VectorStore is null
+	at com.ai.springai.etl.controller.EtlController.faq(EtlController.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-07-18 21:30:34 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 17948 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:30:34 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:30:34 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:30:39 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:30:40 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 5.731 seconds (process running for 7.427)
+2025-07-18 21:31:14 ERROR [http-nio-8585-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:170]
+                Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: vectorStore cannot be null] with root cause
+java.lang.IllegalArgumentException: vectorStore cannot be null
+	at org.springframework.util.Assert.notNull(Assert.java:181)
+	at org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor.<init>(QuestionAnswerAdvisor.java:92)
+	at org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor.<init>(QuestionAnswerAdvisor.java:86)
+	at com.ai.springai.etl.controller.EtlController.faq(EtlController.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-07-18 21:32:13 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 20084 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:32:13 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:32:13 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:32:18 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:32:19 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 5.826 seconds (process running for 7.577)
+2025-07-18 21:34:46 ERROR [http-nio-8585-exec-6] o.s.a.c.BeanOutputConverter [BeanOutputConverter.java:185]
+                Could not parse the given text to the desired target type: "{
+  "content": [
+    {
+      "company": "OpenAI",
+      "model": "GPT-4o",
+      "context_window_size": 128000
+    },
+    {
+      "company": "OpenAI",
+      "model": "GPT-4 Turbo",
+      "context_window_size": 128000
+    },
+    {
+      "company": "OpenAI",
+      "model": "GPT-4.1",
+      "context_window_size": 1000000
+    },
+    {
+      "company": "OpenAI",
+      "model": "o1-preview",
+      "context_window_size": 128000
+    },
+    {
+      "company": "OpenAI",
+      "model": "GPT-3.5 Turbo",
+      "context_window_size": 16000
+    }
+  ],
+  "promptSummary": "List of OpenAI models and their context window sizes."
+}" into class com.ai.springai.etl.dto.ResponseDto
+2025-07-18 21:34:46 ERROR [http-nio-8585-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:170]
+                Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 14] (through reference chain: com.ai.springai.etl.dto.ResponseDto["content"])] with root cause
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 14] (through reference chain: com.ai.springai.etl.dto.ResponseDto["content"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1794)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1568)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromArray(StdDeserializer.java:221)
+	at com.fasterxml.jackson.databind.deser.std.StringDeserializer.deserialize(StringDeserializer.java:46)
+	at com.fasterxml.jackson.databind.deser.std.StringDeserializer.deserialize(StringDeserializer.java:11)
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4971)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3887)
+	at org.springframework.ai.converter.BeanOutputConverter.convert(BeanOutputConverter.java:182)
+	at org.springframework.ai.converter.BeanOutputConverter.convert(BeanOutputConverter.java:62)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:424)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:413)
+	at com.ai.springai.etl.controller.EtlController.faq(EtlController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-07-18 21:35:47 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 19520 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:35:47 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:35:47 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:35:52 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:35:52 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 5.855 seconds (process running for 7.434)
+2025-07-18 21:37:09 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 18688 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:37:09 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:37:09 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:37:14 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:37:14 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 6.252 seconds (process running for 7.773)
+2025-07-18 21:37:54 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 20404 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:37:54 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:37:54 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:37:59 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:37:59 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 6.322 seconds (process running for 8.132)
+2025-07-18 21:38:40 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 10120 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:38:40 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:38:40 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:38:45 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:38:46 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 6.15 seconds (process running for 7.94)
+2025-07-18 21:38:57 INFO  [http-nio-8585-exec-1] c.a.s.e.c.EtlController [EtlController.java:40]
+                Received request to process file: Full stack engineer.pdf
+2025-07-18 21:38:57 INFO  [http-nio-8585-exec-1] c.a.s.e.s.EtlService [EtlService.java:42]
+                Received file: Full stack engineer.pdf, content type: application/pdf
+2025-07-18 21:38:57 INFO  [http-nio-8585-exec-1] c.a.s.e.s.EtlService [EtlService.java:53]
+                Successfully read 2 documents from file: Full stack engineer.pdf
+2025-07-18 21:38:57 INFO  [http-nio-8585-exec-1] c.a.s.e.s.EtlService [EtlService.java:62]
+                Formatting documents as markdown.
+2025-07-18 21:39:30 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 10364 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:39:30 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:39:30 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:39:35 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:39:36 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 6.733 seconds (process running for 8.787)
+2025-07-18 21:39:52 INFO  [http-nio-8585-exec-1] c.a.s.e.c.EtlController [EtlController.java:40]
+                Received request to process file: Full stack engineer.pdf
+2025-07-18 21:39:52 INFO  [http-nio-8585-exec-1] c.a.s.e.s.EtlService [EtlService.java:42]
+                Received file: Full stack engineer.pdf, content type: application/pdf
+2025-07-18 21:39:53 INFO  [http-nio-8585-exec-1] c.a.s.e.s.EtlService [EtlService.java:53]
+                Successfully read 2 documents from file: Full stack engineer.pdf
+2025-07-18 21:39:53 INFO  [http-nio-8585-exec-1] c.a.s.e.s.EtlService [EtlService.java:56]
+                Saving 2 documents to vector store.
+2025-07-18 21:39:58 INFO  [http-nio-8585-exec-1] c.a.s.e.s.EtlService [EtlService.java:58]
+                Documents saved to vector store successfully.
+2025-07-18 21:39:58 INFO  [http-nio-8585-exec-1] c.a.s.e.c.EtlController [EtlController.java:43]
+                File processed successfully: Full stack engineer.pdf
+2025-07-18 21:40:45 ERROR [http-nio-8585-exec-3] o.s.a.c.BeanOutputConverter [BeanOutputConverter.java:185]
+                Could not parse the given text to the desired target type: "{
+  "content": [
+    {
+      "company": "OpenAI",
+      "model": "GPT-4o",
+      "context_window_size": 128000
+    },
+    {
+      "company": "OpenAI",
+      "model": "GPT-4 Turbo",
+      "context_window_size": 128000
+    },
+    {
+      "company": "OpenAI",
+      "model": "GPT-4.1",
+      "context_window_size": 1000000
+    },
+    {
+      "company": "OpenAI",
+      "model": "o1-preview",
+      "context_window_size": 128000
+    },
+    {
+      "company": "OpenAI",
+      "model": "GPT-3.5 Turbo",
+      "context_window_size": 16000
+    }
+  ],
+  "promptSummary": "List of OpenAI models and their context window sizes."
+}" into class com.ai.springai.etl.dto.ResponseDto
+2025-07-18 21:40:45 ERROR [http-nio-8585-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:170]
+                Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 14] (through reference chain: com.ai.springai.etl.dto.ResponseDto["content"])] with root cause
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 14] (through reference chain: com.ai.springai.etl.dto.ResponseDto["content"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1794)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1568)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromArray(StdDeserializer.java:221)
+	at com.fasterxml.jackson.databind.deser.std.StringDeserializer.deserialize(StringDeserializer.java:46)
+	at com.fasterxml.jackson.databind.deser.std.StringDeserializer.deserialize(StringDeserializer.java:11)
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4971)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3887)
+	at org.springframework.ai.converter.BeanOutputConverter.convert(BeanOutputConverter.java:182)
+	at org.springframework.ai.converter.BeanOutputConverter.convert(BeanOutputConverter.java:62)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:424)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:413)
+	at com.ai.springai.etl.controller.EtlController.faq(EtlController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-07-18 21:52:57 INFO  [http-nio-8585-exec-8] c.a.s.e.c.EtlController [EtlController.java:40]
+                Received request to process file: IAN MACHARIA KARIMI - CV.docx
+2025-07-18 21:52:57 INFO  [http-nio-8585-exec-8] c.a.s.e.s.EtlService [EtlService.java:42]
+                Received file: IAN MACHARIA KARIMI - CV.docx, content type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-07-18 21:53:01 INFO  [http-nio-8585-exec-8] c.a.s.e.s.EtlService [EtlService.java:53]
+                Successfully read 1 documents from file: IAN MACHARIA KARIMI - CV.docx
+2025-07-18 21:53:01 INFO  [http-nio-8585-exec-8] c.a.s.e.s.EtlService [EtlService.java:56]
+                Saving 1 documents to vector store.
+2025-07-18 21:53:01 ERROR [http-nio-8585-exec-8] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:170]
+                Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.ResourceAccessException: I/O error on POST request for "https://api.openai.com/v1/embeddings": Connection reset] with root cause
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1170)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:833)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:774)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:957)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:979)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:934)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:934)
+2025-07-18 21:53:34 INFO  [http-nio-8585-exec-10] c.a.s.e.c.EtlController [EtlController.java:40]
+                Received request to process file: Designing Data-Intensive Applications The Big Ideas Behind Reliable, Scalable, and Maintainable Systems by Martin Kleppmann.pdf
+2025-07-18 21:53:34 INFO  [http-nio-8585-exec-10] c.a.s.e.s.EtlService [EtlService.java:42]
+                Received file: Designing Data-Intensive Applications The Big Ideas Behind Reliable, Scalable, and Maintainable Systems by Martin Kleppmann.pdf, content type: application/pdf
+2025-07-18 21:53:50 INFO  [http-nio-8585-exec-10] c.a.s.e.s.EtlService [EtlService.java:53]
+                Successfully read 591 documents from file: Designing Data-Intensive Applications The Big Ideas Behind Reliable, Scalable, and Maintainable Systems by Martin Kleppmann.pdf
+2025-07-18 21:53:50 INFO  [http-nio-8585-exec-10] c.a.s.e.s.EtlService [EtlService.java:56]
+                Saving 591 documents to vector store.
+2025-07-18 21:57:31 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 20564 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 21:57:31 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 21:57:31 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 21:57:35 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 21:57:36 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 5.958 seconds (process running for 7.61)
+2025-07-18 21:57:52 INFO  [http-nio-8585-exec-2] c.a.s.e.c.EtlController [EtlController.java:40]
+                Received request to process file: IAN MACHARIA KARIMI - CV.docx
+2025-07-18 21:57:52 INFO  [http-nio-8585-exec-2] c.a.s.e.s.EtlService [EtlService.java:42]
+                Received file: IAN MACHARIA KARIMI - CV.docx, content type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-07-18 21:57:54 INFO  [http-nio-8585-exec-2] c.a.s.e.s.EtlService [EtlService.java:53]
+                Successfully read 1 documents from file: IAN MACHARIA KARIMI - CV.docx
+2025-07-18 21:57:54 INFO  [http-nio-8585-exec-2] c.a.s.e.s.EtlService [EtlService.java:56]
+                Saving 1 documents to vector store.
+2025-07-18 21:57:57 INFO  [http-nio-8585-exec-2] c.a.s.e.s.EtlService [EtlService.java:58]
+                Documents saved to vector store successfully.
+2025-07-18 21:57:57 INFO  [http-nio-8585-exec-2] c.a.s.e.c.EtlController [EtlController.java:43]
+                File processed successfully: IAN MACHARIA KARIMI - CV.docx
+2025-07-18 21:59:11 ERROR [http-nio-8585-exec-4] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:170]
+                Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.ai.retry.NonTransientAiException: HTTP 429 - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+] with root cause
+org.springframework.ai.retry.NonTransientAiException: HTTP 429 - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+	at org.springframework.ai.retry.autoconfigure.SpringAiRetryAutoConfiguration$2.handleError(SpringAiRetryAutoConfiguration.java:109)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
+	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820)
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:775)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:774)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:770)
+	at org.springframework.ai.openai.api.OpenAiApi.embeddings(OpenAiApi.java:294)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$1(OpenAiEmbeddingModel.java:168)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$3(OpenAiEmbeddingModel.java:168)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.call(OpenAiEmbeddingModel.java:166)
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:67)
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:49)
+	at org.springframework.ai.vectorstore.SimpleVectorStore.getUserQueryEmbedding(SimpleVectorStore.java:237)
+	at org.springframework.ai.vectorstore.SimpleVectorStore.doSimilaritySearch(SimpleVectorStore.java:130)
+	at org.springframework.ai.vectorstore.observation.AbstractObservationVectorStore.lambda$similaritySearch$7(AbstractObservationVectorStore.java:126)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.vectorstore.observation.AbstractObservationVectorStore.similaritySearch(AbstractObservationVectorStore.java:125)
+	at org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor.before(QuestionAnswerAdvisor.java:119)
+	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:51)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:418)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:413)
+	at com.ai.springai.etl.controller.EtlController.faq(EtlController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-07-18 22:00:25 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 1640 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 22:00:25 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 22:00:25 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 22:00:31 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 22:00:32 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 7.307 seconds (process running for 9.338)
+2025-07-18 22:00:43 ERROR [http-nio-8585-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:170]
+                Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.ai.retry.NonTransientAiException: HTTP 429 - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+] with root cause
+org.springframework.ai.retry.NonTransientAiException: HTTP 429 - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+	at org.springframework.ai.retry.autoconfigure.SpringAiRetryAutoConfiguration$2.handleError(SpringAiRetryAutoConfiguration.java:109)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
+	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820)
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:775)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:774)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:770)
+	at org.springframework.ai.openai.api.OpenAiApi.embeddings(OpenAiApi.java:294)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$1(OpenAiEmbeddingModel.java:168)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$3(OpenAiEmbeddingModel.java:168)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.call(OpenAiEmbeddingModel.java:166)
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:67)
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:49)
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:70)
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:95)
+	at org.springframework.ai.vectorstore.SimpleVectorStore.createObservationContextBuilder(SimpleVectorStore.java:244)
+	at org.springframework.ai.vectorstore.observation.AbstractObservationVectorStore.similaritySearch(AbstractObservationVectorStore.java:118)
+	at org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor.before(QuestionAnswerAdvisor.java:119)
+	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:51)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:418)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:413)
+	at com.ai.springai.rag.ModelsController.faqs(ModelsController.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-07-18 22:01:35 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:53]
+                Starting TemplateApplication using Java 17.0.8 with PID 4984 (C:\Users\ianma\Projects\Personal\Java\spring-ai\target\classes started by ianma in C:\Users\ianma\Projects\Personal\Java\spring-ai)
+2025-07-18 22:01:35 DEBUG [main] c.a.s.TemplateApplication [StartupInfoLogger.java:54]
+                Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18 22:01:35 INFO  [main] c.a.s.TemplateApplication [SpringApplication.java:652]
+                No active profile set, falling back to 1 default profile: "default"
+2025-07-18 22:01:39 INFO  [main] c.a.s.r.RagConfiguration [RagConfiguration.java:38]
+                Vector Store File Exists,
+2025-07-18 22:01:40 INFO  [main] c.a.s.TemplateApplication [StartupInfoLogger.java:59]
+                Started TemplateApplication in 5.966 seconds (process running for 7.454)
+2025-07-18 22:02:23 ERROR [http-nio-8585-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:170]
+                Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.ai.retry.NonTransientAiException: HTTP 429 - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+] with root cause
+org.springframework.ai.retry.NonTransientAiException: HTTP 429 - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+	at org.springframework.ai.retry.autoconfigure.SpringAiRetryAutoConfiguration$2.handleError(SpringAiRetryAutoConfiguration.java:109)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
+	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
+	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:831)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:820)
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:819)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:775)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:579)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:533)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:814)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:774)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:770)
+	at org.springframework.ai.openai.api.OpenAiApi.embeddings(OpenAiApi.java:294)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$1(OpenAiEmbeddingModel.java:168)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$3(OpenAiEmbeddingModel.java:168)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.call(OpenAiEmbeddingModel.java:166)
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:67)
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:49)
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:70)
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:95)
+	at org.springframework.ai.vectorstore.SimpleVectorStore.createObservationContextBuilder(SimpleVectorStore.java:244)
+	at org.springframework.ai.vectorstore.observation.AbstractObservationVectorStore.similaritySearch(AbstractObservationVectorStore.java:118)
+	at org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor.before(QuestionAnswerAdvisor.java:119)
+	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:51)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doSingleWithBeanOutputConverter(DefaultChatClient.java:418)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.entity(DefaultChatClient.java:413)
+	at com.ai.springai.etl.controller.EtlController.faq(EtlController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)

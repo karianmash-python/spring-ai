@@ -59,6 +59,7 @@ public class EtlService {
         }
 
         if (saveAsMarkdown) {
+            logger.info("Formatting documents as markdown.");
             String content = documents.stream()
                     .map(Document::getFormattedContent)
                     .collect(Collectors.joining("\n\n--- END OF DOCUMENT ---\n\n"));
@@ -67,6 +68,7 @@ public class EtlService {
             Prompt prompt = promptTemplate.create(Map.of("text_content", content));
 
             String transformedContent = chatClient.prompt(prompt).call().content();
+            logger.info("Documents formatted as markdown successfully. Output: {}", transformedContent);
 
             String outputFilename = getOutputFilename(file.getOriginalFilename());
             if (transformedContent != null) {
